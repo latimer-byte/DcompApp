@@ -12,14 +12,17 @@ export async function analyzeMarket(ticks: number[], symbol: string) {
   }
 
   const prompt = `
-    Analyze the following recent price ticks for ${symbol}:
+    You are a professional quantitative trader and market analyst.
+    Analyze the following recent price ticks (last 50 data points) for the asset ${symbol}:
     ${ticks.join(", ")}
 
-    Provide a market sentiment analysis in JSON format:
+    Based on this price action, provide a high-fidelity market sentiment analysis.
+    
+    Return ONLY a JSON object in this exact format:
     {
       "sentiment": "Bullish" | "Bearish" | "Neutral",
       "score": number (0-100, where 100 is extremely bullish),
-      "reasoning": "A brief explanation of the trend"
+      "reasoning": "A concise, professional technical explanation (max 150 characters) focusing on momentum, support/resistance, or volatility."
     }
   `;
 

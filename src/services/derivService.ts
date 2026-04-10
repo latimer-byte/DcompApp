@@ -33,6 +33,7 @@ class DerivService {
     this.socket.onopen = () => {
       console.log('Deriv WebSocket connected');
       this.onConnectListeners.forEach(cb => cb());
+      this.startHeartbeat();
     };
 
     this.socket.onmessage = (event) => {
@@ -57,6 +58,12 @@ class DerivService {
     this.socket.onerror = (error) => {
       console.error('Deriv WebSocket error:', error);
     };
+  }
+
+  private startHeartbeat() {
+    setInterval(() => {
+      this.send({ ping: 1 });
+    }, 30000); // Ping every 30 seconds
   }
 
   public send(request: any) {
