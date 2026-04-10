@@ -32,14 +32,14 @@ import {
 } from 'recharts';
 import { derivService, Tick, Market } from './services/derivService';
 import { analyzeMarket } from './services/geminiService';
-import { Button } from '@/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/ui/card';
-import { Input } from '@/ui/input';
-import { Badge } from '@/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/ui/tabs';
-import { ScrollArea } from '@/ui/scroll-area';
-import { Separator } from '@/ui/separator';
-import { Skeleton } from '@/ui/skeleton';
+import { Button } from './ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './ui/card';
+import { Input } from './ui/input';
+import { Badge } from './ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { ScrollArea } from './ui/scroll-area';
+import { Separator } from './ui/separator';
+import { Skeleton } from './ui/skeleton';
 import { Toaster, toast } from 'sonner';
 
 export default function App() {
