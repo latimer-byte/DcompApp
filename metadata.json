@@ -1,0 +1,5 @@
+{
+  "name": "Deriv AI Trader",
+  "description": "A high-performance trading dashboard integrated with Deriv API and Gemini AI for real-time market sentiment analysis.",
+  "requestFramePermissions": []
+}
